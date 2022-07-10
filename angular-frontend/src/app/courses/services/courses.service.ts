@@ -13,6 +13,6 @@ export class CoursesService {
   constructor(private httpClient: HttpClient) {}
 
   list() {
-    return this.httpClient.get<Course[]>(this.API).pipe(first(), delay(5000));
+    return this.httpClient.get<Course[]>(this.API).pipe(first());
   }
 }
